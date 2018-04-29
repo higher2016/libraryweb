@@ -45,11 +45,7 @@
                         $('#send').click(function () {
                             var msg = $('#msg').val()
                             $('#msg').val('')
-                            if (ws.send(msg)) {
-                                log('Message sent')
-                            } else {
-                                log('Message not sent')
-                            }
+                            ws.send(msg)
                         })
                     } else {
                         log('closing connection')
